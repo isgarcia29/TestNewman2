@@ -13,10 +13,16 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test('Status code is 200', function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var firstResponse = jsonData[0];\r",
+							"    console.log(firstResponse);\r",
+							"    pm.expect(firstResponse).to.have.property(\"bookingid\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
