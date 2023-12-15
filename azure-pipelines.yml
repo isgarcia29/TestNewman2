@@ -10,9 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     npm install -g newman
     newman run Books.postman_collection.json -e Books_QA.postman_environment.json
