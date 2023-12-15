@@ -15,5 +15,5 @@ steps:
 
 - script: |
     npm install -g newman
-    newman run NewmanTest.postman_collection.json
+    newman run Books.postman_collection.json -e Books_QA.postman_environment.json
   displayName: 'Run Postman Collection'
