@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "16b6d4be-7cc1-4aea-90da-83287077f7e1",
+		"_postman_id": "d21f1db2-b63d-4f59-b0cb-54f532936eeb",
 		"name": "NewmanTest",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31188737"
@@ -74,10 +74,10 @@
 							"});\r",
 							"var jsonData = pm.response.json();\r",
 							"pm.test(\"Your test name\", function () {\r",
-							"    pm.expect(jsonData.firstname).to.eql('John');\r",
+							"    pm.expect(jsonData.firstname).to.eql('Israel');\r",
 							"});\r",
 							"pm.test(\"Your test name\", function () {\r",
-							"    pm.expect(jsonData.lastname).to.eql('Smith');\r",
+							"    pm.expect(jsonData.lastname).to.eql('Garcia');\r",
 							"});\r",
 							"pm.test(\"Your test name\", function () {\r",
 							"    pm.expect(jsonData.totalprice).to.eql(111);\r",
@@ -91,7 +91,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://restful-booker.herokuapp.com/booking/130",
+					"raw": "https://restful-booker.herokuapp.com/booking/3563",
 					"protocol": "https",
 					"host": [
 						"restful-booker",
@@ -100,7 +100,7 @@
 					],
 					"path": [
 						"booking",
-						"130"
+						"3563"
 					]
 				}
 			},
