@@ -16,7 +16,9 @@ steps:
 - script: |
     newman run Books.postman_collection.json -e Books_QA.postman_environment.json -r cli,junit,htmlextra --reporter-junit-export "Newman_Junit.xml" --reporter-htmlextra-export "Newman_HTML_Report.html"
   displayName: 'Run Postman Collection'
+
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/Newman_Junit.xml"'
+    testResultsFiles: '**/*.xml'
+    testRunTitle: 'Resultss'
