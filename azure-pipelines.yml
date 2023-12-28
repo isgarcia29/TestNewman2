@@ -24,3 +24,7 @@ steps:
     failTaskOnFailedTests: true
     failTaskOnMissingResultsFile: true
     testRunTitle: 'IsraResults'
+- task: UploadPostmanHtmlReport@1
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    tabName: 
