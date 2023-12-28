@@ -11,8 +11,8 @@ pool:
 
 steps:
 - script: |
-    npm install -g newman
+    npm install -g newman-reporter-htmlextra
   displayName: 'install newman'
 - script: |
-    newman run Books.postman_collection.json -e Books_QA.postman_environment.json
+    newman run Books.postman_collection.json -e Books_QA.postman_environment.json -r cli,junit,htmlextra --reporter-junit-export "Newman_Junit.xml" --reporter-htmlextra-export "Newman_HTML_Report.html"
   displayName: 'Run Postman Collection'
