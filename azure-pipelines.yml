@@ -20,5 +20,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/*.xml'
-    testRunTitle: 'Resultss'
+    testResultsFiles: '**/Newman_Junit.xml'
+    failTaskOnFailedTests: true
+    failTaskOnMissingResultsFile: true
+    testRunTitle: 'IsraResults'
